@@ -1,20 +1,20 @@
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 import GlobalStyle from "./globalStyle";
 import HomePage from "./pages/Home";
-import Nav from "./components/Nav";
-import Footer from "./components/Footer";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 
+
 function App() {
+	const location = useLocation();
 	return (
 		<div className="App">
 			<GlobalStyle />
-			<Nav />
-			<HomePage />
-			<Portfolio />
-			<Contact />
-			<Footer />
+			<Switch location={location} key={location.pathname} >
+				<HomePage exact path="/" />
+				<Portfolio exact path="portfolio" component={Portfolio} />
+				<Contact exact path="contact" component={Contact} />
+			</Switch>
 		</div>
 	);
 }

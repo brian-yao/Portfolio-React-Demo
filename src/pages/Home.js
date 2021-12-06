@@ -3,10 +3,13 @@ import styled from "styled-components";
 import MainBg from "../images/apple-1838564_1920-main.jpg";
 import AboutSection from "../components/About";
 import SummarySection from "../components/Summary";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
 	return (
 		<>
+			<Nav />
 			<HomeContainer>
 				<EntryBanner id="entry-banner">
 					<p id="hello">Hello, I'm</p>
@@ -24,6 +27,7 @@ const HomePage = () => {
 			</HomeContainer>
 			<AboutSection />
 			<SummarySection />
+			<Footer />
 		</>
 	);
 };

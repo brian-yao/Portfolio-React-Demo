@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import logo from "../images/logo.svg";
 import MainBg from "../images/apple-1838564_1920-main.jpg";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
 	return (
@@ -14,13 +15,13 @@ const Nav = () => {
 			<PrimaryNav>
 				<ul>
 					<li>
-						<a href="index.html">Home</a>
+						<Link to="/">Home</Link>
 					</li>
 					<li>
-						<a href="portfolio.html">Portfolio</a>
+						<Link to="/portfolio">Portfolio</Link>
 					</li>
 					<li>
-						<a href="contact.html">Contact</a>
+						<Link to="/contact">Contact</Link>
 					</li>
 				</ul>
 			</PrimaryNav>
